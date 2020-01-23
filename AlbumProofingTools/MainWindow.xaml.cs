@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AlbumProofingTools.DesignData;
+using AlbumProofingTools.Models;
+
 
 namespace AlbumProofingTools
 {
@@ -20,9 +23,15 @@ namespace AlbumProofingTools
     /// </summary>
     public partial class MainWindow : Window
     {
+
+       
+        private MainViewModel _viewModel = new DesignViewModel();
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = _viewModel;
         }
+
+      
     }
 }
